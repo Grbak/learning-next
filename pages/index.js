@@ -1,16 +1,13 @@
 import Link from "next/link";
 import Head from 'next/head';
 
+import { Layout } from "../components/Layout";
+
 export default function Index() {
   return(
-    <>
-    <Head>
-      <title>Test | learning next.js</title>
-      <meta name="keywords" content="next,javascript,react" />
-      <meta charSet="utf-8"/>
-    </Head>
-      <h1>I would like to learn next.js</h1>
-      <Link href="./items">Items</Link>
-    </>
+    <Layout title="Main" >
+      <h1>Main page</h1>
+      <h2>I would like to learn next.js</h2>
+    </Layout>
   );
 }
