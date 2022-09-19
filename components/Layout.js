@@ -11,7 +11,7 @@ export function Layout({ children, title }) {
             </Head>
             <nav>
                 <Link href="/"><a>Main</a></Link>
-                <Link href="/items"><a>Items</a></Link>
+                <Link href="/songs"><a>Songs</a></Link>
             </nav>
             <main>
                 {children}
