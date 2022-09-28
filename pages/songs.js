@@ -1,4 +1,5 @@
 import Router from 'next/router';
+import Link from 'next/link';
 import { Layout } from '../components/Layout';
 
 export default function Songs({ data }) {
@@ -10,7 +11,11 @@ export default function Songs({ data }) {
             <ul>
                 {data.map((song) => (
                     <li key={`${song.authot}-${song.title}`}>
-                        {song.author} - {song.title} - {song.bpm}
+                        <Link href={`/song/[id]`} as={`/song/${song.id}`}>
+                            <a>
+                                {song.author} - {song.title} - {song.bpm}
+                            </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
